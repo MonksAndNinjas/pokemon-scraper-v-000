@@ -12,7 +12,8 @@ class Pokemon
     database_connection.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
 
-  def self.find(id, db)
+  def self.find(id, database_connection)
+    database_connection.execute("SELECT pokemon.id FROM pokemon WHERE pokemon.id = #{id}")
   end
 
 end

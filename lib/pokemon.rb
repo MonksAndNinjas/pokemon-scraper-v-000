@@ -19,7 +19,7 @@ class Pokemon
     pokemon_type = pokemon[2]
     pokemon_db = database_connection
     #binding.pry
-    Pokemon.new(pokemon_id, pokemon_name, pokemon_type, pokemon_db)
+    Pokemon.new(id: pokemon_id, name: pokemon_name, type: pokemon_type, db: pokemon_db)
   end
 
 end

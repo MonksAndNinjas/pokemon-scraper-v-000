@@ -1,6 +1,6 @@
 class Pokemon
 
-  def initialize(db)
+  def initialize('db/pokemon.db')
     @db = db
   end
 

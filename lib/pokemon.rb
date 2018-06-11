@@ -1,7 +1,7 @@
 class Pokemon
   attr_accessor :id, :name, :type, :hp, :db
 
-  def initialize(id:, name:, type:, hp: nil, db:)
+  def initialize(id:, name:, type:, hp, db:)
     @id = id
     @name = name
     @type = type
@@ -20,7 +20,7 @@ class Pokemon
     pokemon_type = pokemon[2]
     pokemon_db = database_connection
     #binding.pry
-    Pokemon.new(id: pokemon_id, name: pokemon_name, type: pokemon_type, hp: nil db: pokemon_db)
+    Pokemon.new(id: pokemon_id, name: pokemon_name, type: pokemon_type, hp: nil, db: pokemon_db)
   end
 
   def alter_hp(new_hp, database_connection)

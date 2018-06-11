@@ -3,7 +3,6 @@ class Pokemon
   @@all = []
 
   def initialize(id:, name:, type:, db:)
-    [@id, @name]
   end
 
   def self.all

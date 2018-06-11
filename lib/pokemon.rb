@@ -20,13 +20,13 @@ class Pokemon
     pokemon_type = pokemon[2]
     pokemon_db = database_connection
     #binding.pry
-    Pokemon.new(id: pokemon_id, name: pokemon_name, type: pokemon_type, db: pokemon_db)
+    Pokemon.new(id: pokemon_id, name: pokemon_name, type: pokemon_type, hp: 60, db: pokemon_db)
   end
 
   def alter_hp(new_hp, database_connection)
     #pokemon = self.class.find(self.id, database_connection)
     #pokemon.hp = new_hp
-    database_connection.execute("UPDATE pokemon SET hp = ? WHERE id = ?", new_hp, self.id)
+    #database_connection.execute("UPDATE pokemon SET hp = ? WHERE id = ?", new_hp, self.id)
     #binding.pry
   end
 

@@ -14,8 +14,12 @@ class Pokemon
 
   def self.find(id, database_connection)
     pokemon = database_connection.execute("SELECT * FROM pokemon WHERE id = ?", id)
-    pokemon_name 
+    pokemon_id = pokemon[0]
+    pokemon_name = pokemon[1]
+    pokemon_type = pokemon[2]
+    pokemon_db = database_connection
     #binding.pry
+    Pokemon.new(pokemon_id, pokemon_name, pokemon_type, pokemon_db)
   end
 
 end

@@ -4,7 +4,7 @@ class Pokemon
     @id = id
     @name = name
     @type = type
-    #@db = db
+    @db = db
   end
 
   #def self.save(name, breed, age, database_connection)
